@@ -15,10 +15,27 @@ package ca.sheridancollege.project;
  *
  * @author dancye
  */
-public abstract class Card {
+public class Card {
     // default modifier for child classes
+    private Face face;
+    private Suit suit;
+    int total = 0;
+
+    public Card(Face cardFace, Suit cardSuit) {
+    
+        this.face = cardFace;
+        this.suit = cardSuit;    
+    
+    }
+    
     public int getFace() {
-        return 0;
+        return face.getValue();
+    }
+
+    public String getSuit() {
+        
+        return suit.printSuit();
+
     }
 
     /**
@@ -28,6 +45,10 @@ public abstract class Card {
      *         playing card etc.
      */
     @Override
-    public abstract String toString();
+    public String toString() {
+        
+        return face + "of" + suit;
+
+    }
 
 }//

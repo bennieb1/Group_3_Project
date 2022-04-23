@@ -1,38 +1,38 @@
-package ca.sheridancollege.project;
+// package ca.sheridancollege.project;
 
-public class PlayingCard extends Card {
+// public class PlayingCard extends Card {
 
-	private int value;
-	private Suit suit;
+// 	private int value;
+// 	private Suit suit;
 
-	public String toString() {
+// 	public String toString() {
 		
 		
-	}
+// 	}
 
-	public int getValue() {
-		return this.value;
-	}
+// 	public int getValue() {
+// 		return this.value;
+// 	}
 
-	/**
-	 * 
-	 * @param value
-	 */
-	public void setValue(int value) {
-		this.value = value;
-	}
+// 	/**
+// 	 * 
+// 	 * @param value
+// 	 */
+// 	public void setValue(int value) {
+// 		this.value = value;
+// 	}
 
-	public Suit getSuit() {
-		return this.suit;
-	}
+// 	public Suit getSuit() {
+// 		return this.suit;
+// 	}
 
-	/**
-	 * 
-	 * @param suit
-	 */
-	public void setSuit(int suit) {
+// 	/**
+// 	 * 
+// 	 * @param suit
+// 	 */
+// 	public void setSuit(int suit) {
 		
 		
-	}
+// 	}
 
-}
+// }
