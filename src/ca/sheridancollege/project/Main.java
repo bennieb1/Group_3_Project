@@ -58,18 +58,21 @@ public class Main {
                 System.out.println("");
                 System.out.println("- Dealers turn -");
                 // DRAW CARD
-                if (dealer.getHandSum() <= 12) {
+                if (dealer.getHandSum() < 1) {
                     dealer.addCard(deck1.dealNext());
-                    if (dealer.getHandSum() == 21) {
-                        System.out.println("Blackjack! Dealer won.");
-                        System.exit(0);
-                    }
-                    if (dealer.getHandSum() > 21) {
-                        System.out.println("Dealer busted and got a total of " + dealer.getHandSum() + ". "
-                                + me.getName() + " wins this time!");
-                        System.exit(0);
-                    }
-                } else {
+
+                } else if (dealer.getHandSum() == 21) {
+                    System.out.println("Blackjack! Dealer won.");
+                    System.exit(0);
+                }
+
+                else if (dealer.getHandSum() > 21) {
+                    System.out.println("Dealer busted and got a total of " + dealer.getHandSum() + ". "
+                            + me.getName() + " wins this time!");
+                    System.exit(0);
+                }
+
+                else {
                     System.out.println("Dealer has chosen to stay!");
                     int totalDealerSum = dealer.getHandSum();
                     int totalPlayerSum = me.getHandSum();
