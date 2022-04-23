@@ -66,7 +66,7 @@ public class Player {
     
     public void getHand(boolean hideCards) {
     
-        System.out.println(this.name + "your current hand.");
+        System.out.println(this.name + " your current hand.");
 
         for (int c = 0; c < numOfCards; c++) {
             if (c == 0 && !hideCards) {

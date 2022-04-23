@@ -8,7 +8,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean stay = false;
 
-        System.out.println("What nickName would you like to have?");
+        System.out.println("What NickName would you like to have?");
         String pAnswer = scanner.nextLine();
         Player me = new Player(pAnswer);
         Player dealer = new Player("Dealer ");
@@ -49,7 +49,7 @@ public class Main {
                     System.out.println("You have chosen to stay. Your hand: " + me.getHandSum());
                 }
 
-            } while (pAnswer.equalsIgnoreCase("Hit"));
+            } while (pAnswer.equalsIgnoreCase("hit"));
 
             // DEALER
             stay = false;
@@ -58,9 +58,9 @@ public class Main {
                 System.out.println("");
                 System.out.println("- Dealers turn -");
                 // DRAW CARD
-                if (dealer.getHandSum() <= 15) {
+                if (dealer.getHandSum() <= 12) {
                     dealer.addCard(deck1.dealNext());
-                    if (dealer.getHandSum() == 15) {
+                    if (dealer.getHandSum() == 21) {
                         System.out.println("Blackjack! Dealer won.");
                         System.exit(0);
                     }
