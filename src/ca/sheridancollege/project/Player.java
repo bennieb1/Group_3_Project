@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class Player {
 
     private String name; //the unique name for this player
+    ArrayList<String> names = new ArrayList<String>(); 
     private int numOfCards;
     
     /**
@@ -34,6 +35,16 @@ public class Player {
         this.name = name;
 
     }
+    public boolean checkName(String name){
+        boolean isUnique=false;
+        
+        if(names.contains(name)){
+            return isUnique;
+        }    
+        else{
+            return isUnique=true;
+        }    
+    }
 
     ArrayList<Card> playerHand;
     /**
@@ -43,6 +54,7 @@ public class Player {
      */
     public Player(String name) {
         this.name = name;
+        names.add(name);
         playerHand = new ArrayList<Card>();
     }
 
@@ -62,6 +74,24 @@ public class Player {
 
         }
         return sum;
+    }
+    public boolean checkGetHandSum(boolean result) {
+
+        int sum = 0;
+
+        for (Card countSum : playerHand) {
+
+            sum = sum + countSum.getFace();
+
+        }
+        return result;
+//        int sum1 = sum;
+//        
+//        boolean notEmpty=false;
+//        if(sum1 != 0)
+//            return notEmpty=true;
+//        else
+//            return notEmpty;
     }
     
     public void getHand(boolean hideCards) {
