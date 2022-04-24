@@ -54,6 +54,21 @@ public class Deck {
 		}
 
 	}
+        
+        public boolean checkGetCardDeck(int start) {
+            
+		for (Card k : deck) {
+			System.out.println(" " + start + "/52" + k);
+			start++;
+		}
+		boolean getAllCards=false;
+
+		if(start>=53)
+			return getAllCards=true;
+		else
+			return getAllCards;	
+
+	}
 
 	public Card dealNext() {
 
@@ -67,6 +82,20 @@ public class Deck {
 		this.NUMBER_OF_CARDS--;
 
 		return topCard;
+
+	}
+        public boolean checkDealNext(boolean r) {
+
+		Card topCard = this.deck[0];
+
+		for (int currentCard = 1; currentCard < NUMBER_OF_CARDS; currentCard++) {
+			this.deck[currentCard - 1] = this.deck[currentCard];
+		}
+		this.deck[NUMBER_OF_CARDS - 1] = null;
+
+		this.NUMBER_OF_CARDS--;
+
+		return r;
 
 	}
 
